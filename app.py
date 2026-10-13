@@ -56,7 +56,7 @@ def predict():
 
         if float(temperature) >= 0 and float(temperature)<= 6:
             temperature_level = 'Cool'
-        elif float(temperature) >=7 and float(temperature):
+        elif float(temperature) >=7 and float(temperature) <= 30:
             temperature_level = 'Warm'
         else:
             temperature_level= 'Hot' 

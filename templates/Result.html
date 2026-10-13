@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body class="display-page">
+    <h1>Recommended Crop : {{ cropName[0] | capitalize }}</h1>
+    <h3>Based on your soil and weather parameters</h3>
+
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Level</th>
+        </tr>
+        <tr>
+            <td>Nitrogen (N)</td>
+            <td>{{ values[0] }}</td>
+            <td>{{ cont[0] }}</td>
+        </tr>
+        <tr>
+            <td>Phosphorous (P)</td>
+            <td>{{ values[1] }}</td>
+            <td>{{ cont[1] }}</td>
+        </tr>
+        <tr>
+            <td>Potassium (K)</td>
+            <td>{{ values[2] }}</td>
+            <td>{{ cont[2] }}</td>
+        </tr>
+        <tr>
+            <td>Humidity</td>
+            <td>{{ values[3] }}%</td>
+            <td>{{ cont[3] }}</td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td>{{ values[4] }}&deg;C</td>
+            <td>{{ cont[4] }}</td>
+        </tr>
+        <tr>
+            <td>Rainfall</td>
+            <td>{{ values[5] }} mm</td>
+            <td>{{ cont[5] }}</td>
+        </tr>
+        <tr>
+            <td>pH</td>
+            <td>{{ values[6] }}</td>
+            <td>{{ cont[6] }}</td>
+        </tr>
+    </table>
+
+    <form action="/" method="get">
+        <input class="button" type="submit" value="Try Another">
+    </form>
+</body>
+</html>
