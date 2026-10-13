@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body class="display-page">
-    <h1>Recommended Crop : {{ cropName[0] | capitalize }}</h1>
+    <h1>Recommended Crop: {{ cropName[0] | capitalize }}</h1>
     <h3>Based on your soil and weather parameters</h3>
 
     <table>
@@ -54,7 +54,7 @@
         </tr>
     </table>
 
-    <form action="/" method="get">
+    <form class="form-back" action="/" method="get">
         <input class="button" type="submit" value="Try Another">
     </form>
 </body>

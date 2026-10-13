@@ -1,110 +1,203 @@
-* { 
+* {
     margin: 0;
     padding: 0;
-}
- 
-html {
-    font-size: 62.5%;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
-        background-image:url("../static/Background_image.png");
-        background-size:100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        margin: 0; 
-        text-align: center;
-        overflow: hidden;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgba(0, 40, 10, 0.55), rgba(0, 40, 10, 0.55)),
+        url("../static/Background_image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #fff;
+    padding: 2rem 1rem 3rem;
 }
-
-
-.display-page {
-    background-color: rgb(197, 250, 192);
-    background-image: none; 
-    color: black; 
-}
-
-
-h3 {
-    color: antiquewhite;
-    word-spacing: 10px;
-    font-size:1.9em;
-}
-
 
 h1 {
-    word-spacing: 10px;
-    font-size:3em;
-    margin: 0.4em;
+    font-size: 2.4rem;
+    margin: 1.2rem 0 0.4rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e8ffe8;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Form page ---------- */
 
 .form {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    justify-content: space-between; /* Distribute columns evenly */
-    margin: 30px;
-    width:fit-content;
-    padding: 50px;
-    height: 80vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto;
+    max-width: 640px;
+    width: 100%;
+    padding: 2rem 2.4rem;
+    background-color: rgba(0, 0, 0, 0.78);
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    text-align: left;
 }
 
-.form label{
-    padding:1.6em;
-} 
-
-
-.form input {
-    width: 50%;
-    border: 10px;
-    height:1.7em;
-
+.form label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
 }
 
-.box {
-    margin:1em;
-    width: fit-content;
-    border-radius: 7px;   
+.form input[type="number"] {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.55rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #9aa0a6;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111111;
 }
 
-input.box {
-    padding-left: 10px; 
+.form input[type="number"]:focus {
+    outline: 2px solid #24bd18;
+    border-color: #24bd18;
 }
 
-input[type="submit"] {
-    background: rgb(24, 189, 24);
-    border: solid 1px rgb(15, 10, 1);
-    color: white;
-    transition: all 1s;
-    width: 100px; /* Set a specific width */
-    padding: 0.8rem; /* Maintain padding */
-    margin: 12px auto; /* Center horizontally */
-    height:2.2em;
+.form input[type="submit"],
+.button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 0.6rem;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(180deg, #2fd126, #1a9e14);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
-
+.form input[type="submit"]:hover,
 .button:hover {
-    box-shadow: 0 8px 16px 0 rgb(243, 104, 11), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
 }
 
+.form input[type="submit"]:active,
 .button:active {
-background:rgb(109, 241, 56);
+    transform: translateY(0);
+    background: linear-gradient(180deg, #6df138, #2fae1f);
+}
+
+/* ---------- Result page ---------- */
+
+.display-page {
+    background: linear-gradient(160deg, #e9fbe4 0%, #c5fac0 55%, #aef0a6 100%);
+    color: #14261a;
+}
+
+.display-page h1 {
+    color: #0d5c16;
+    text-shadow: none;
+    font-size: 2.6rem;
+    margin-top: 1.6rem;
+}
+
+.display-page h3 {
+    color: #2a4d32;
+    text-shadow: none;
 }
 
 table {
-display: flex;
-border-collapse: collapse;
-margin: 8vh;
-justify-content: center;
-align-items: center;
+    border-collapse: collapse;
+    margin: 1.5rem auto 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 26px rgba(20, 60, 25, 0.25);
+    min-width: 520px;
+    text-align: left;
 }
 
-td, th {
-border: 2px solid rgb(0, 0, 0);
-padding: 10px;
-width: auto;
-font-size: 2em;
+th, td {
+    border: none;
+    border-bottom: 1px solid #d8e8d8;
+    padding: 0.85rem 1.4rem;
+    font-size: 1.05rem;
+    color: #14261a;
+}
+
+th {
+    background: #167a20;
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) td {
+    background: #f2fbf1;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td:nth-child(2) {
+    font-variant-numeric: tabular-nums;
+    color: #0f3d18;
+}
+
+td:nth-child(3) {
+    font-weight: 700;
+    color: #0d5c16;
+}
+
+.form-back {
+    margin-bottom: 2.5rem;
+}
+
+@media (max-width: 640px) {
+    .form {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 0.5rem;
+    }
+
+    .form label {
+        margin-top: 0.5rem;
+    }
+
+    .form input[type="number"] {
+        max-width: none;
+    }
+
+    table {
+        min-width: 0;
+        width: 95%;
+    }
+
+    th, td {
+        padding: 0.6rem 0.7rem;
+        font-size: 0.95rem;
+    }
 }

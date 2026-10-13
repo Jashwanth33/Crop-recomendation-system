@@ -15,27 +15,27 @@
 
     <form class="form" action="/predict/" method="post">
         <label for="Nitrogen">Nitrogen (N) kg/ha</label>
-        <input class="box" type="number" step="any" min="0" id="Nitrogen" name="Nitrogen" placeholder="e.g. 90" required>
+        <input type="number" step="any" min="0" id="Nitrogen" name="Nitrogen" placeholder="e.g. 90" required>
 
         <label for="Phosphorous">Phosphorous (P) kg/ha</label>
-        <input class="box" type="number" step="any" min="0" id="Phosphorous" name="Phosphorous" placeholder="e.g. 42" required>
+        <input type="number" step="any" min="0" id="Phosphorous" name="Phosphorous" placeholder="e.g. 42" required>
 
         <label for="Potassium">Potassium (K) kg/ha</label>
-        <input class="box" type="number" step="any" min="0" id="Potassium" name="Potassium" placeholder="e.g. 43" required>
+        <input type="number" step="any" min="0" id="Potassium" name="Potassium" placeholder="e.g. 43" required>
 
         <label for="Temperature">Temperature (&deg;C)</label>
-        <input class="box" type="number" step="any" id="Temperature" name="Temperature" placeholder="e.g. 20.8" required>
+        <input type="number" step="any" id="Temperature" name="Temperature" placeholder="e.g. 20.8" required>
 
         <label for="Humidity">Humidity (%)</label>
-        <input class="box" type="number" step="any" min="0" max="100" id="Humidity" name="Humidity" placeholder="e.g. 82" required>
+        <input type="number" step="any" min="0" max="100" id="Humidity" name="Humidity" placeholder="e.g. 82" required>
 
         <label for="PH">pH</label>
-        <input class="box" type="number" step="any" min="0" max="14" id="PH" name="PH" placeholder="e.g. 6.5" required>
+        <input type="number" step="any" min="0" max="14" id="PH" name="PH" placeholder="e.g. 6.5" required>
 
         <label for="Rainfall">Rainfall (mm)</label>
-        <input class="box" type="number" step="any" min="0" id="Rainfall" name="Rainfall" placeholder="e.g. 202" required>
+        <input type="number" step="any" min="0" id="Rainfall" name="Rainfall" placeholder="e.g. 202" required>
 
-        <input class="button" type="submit" value="Predict">
+        <input type="submit" value="Predict Crop">
     </form>
 </body>
 </html>
